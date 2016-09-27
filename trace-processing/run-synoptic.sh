@@ -1,3 +1,3 @@
 #!/bin/sh
 
-synoptic.sh --dumpInvariants=true --dumpInitialPartitionGraph=true --noRefinement=true --noCoarsening=true --outputCountLabels=true --outputProbLabels=false -c $HOME/Work/Perfume/synoptic/log-args.txt -o ./$@  $@
+java -cp $HOME/repos/synoptic/lib/*:$HOME/repos/synoptic/synoptic/bin/ synoptic.main.SynopticMain --dumpInvariants=true --dumpInitialPartitionGraph=true --noRefinement=true --noCoarsening=true --outputCountLabels=true --outputProbLabels=false -c $HOME/repos/perf-logging/trace-processing/log-args.txt -o ./$@  $@
